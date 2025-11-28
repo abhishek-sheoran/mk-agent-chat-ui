@@ -20,16 +20,13 @@ import {
   PanelRightOpen,
   PanelRightClose,
   SquarePen,
-  XIcon,
-  Plus,
+  XIcon
 } from "lucide-react";
 import { useQueryState, parseAsBoolean } from "nuqs";
 import { StickToBottom, useStickToBottomContext } from "use-stick-to-bottom";
 import ThreadHistory from "./history";
 import { toast } from "sonner";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import { Label } from "../ui/label";
-import { Switch } from "../ui/switch";
 import { GitHubSVG } from "../icons/github";
 import {
   Tooltip,
@@ -479,12 +476,12 @@ export function Thread() {
                             form?.requestSubmit();
                           }
                         }}
-                        placeholder="Type your message..."
+                        placeholder="Try scheduling an appointment... "
                         className="field-sizing-content resize-none border-none bg-transparent p-3.5 pb-0 shadow-none ring-0 outline-none focus:ring-0 focus:outline-none"
                       />
 
                       <div className="flex items-center gap-6 p-2 pt-4">
-                        <div>
+                        {/* <div>
                           <div className="flex items-center space-x-2">
                             <Switch
                               id="render-tool-calls"
@@ -515,7 +512,7 @@ export function Thread() {
                           multiple
                           accept="image/jpeg,image/png,image/gif,image/webp,application/pdf"
                           className="hidden"
-                        />
+                        /> */}
                         {stream.isLoading ? (
                           <Button
                             key="stop"
